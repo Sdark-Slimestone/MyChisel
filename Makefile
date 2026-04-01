@@ -3,6 +3,7 @@ genv:
 	sbt run
 	mkdir -p verilog
 	mv -f *.sv verilog/
+	verilator --lint-only -Wall -Wno-UNUSEDSIGNAL /home/sdark/MyChisel/verilog/*.sv
 
 # 运行测试
 test:
